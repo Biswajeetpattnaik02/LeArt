@@ -1,0 +1,118 @@
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-7" style="min-width: 720px;">
+        <div class="card text-white bg-secondary mb-3" style="height: 100%;">
+            <div class="card-header">View of a sunset</div>
+            <div class="card-body">
+                <video width="686px" controls>
+                    <source src="assets/sample-videos/sunset.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+            </div>
+          </div>
+      </div>
+      <div class="col-5">
+        <div class="card text-white bg-secondary mb-3" style="height: 100%;">
+            <div class="card-header">Equipments</div>
+            <div class="card-title" style="margin-left: 15px;margin-top: 10px;">
+                <h5 >Brushes Used</h5>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li><img
+                                    src="assets/paint-brushes/bright.png"
+                                    height="11px"
+                                    alt=""
+                                    loading="lazy"
+                                  />
+                                  <br>
+                                <span class="brushText">&nbsp;(Bright)</span>
+                                </li>
+                                <li>
+                                    <img
+                                    src="assets/paint-brushes/fan.png"
+                                        height="30"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li>
+                                    <img
+                                    src="assets/paint-brushes/filbert.png"
+                                        height="11px"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li><img
+                                    src="assets/paint-brushes/angle-bright.png"
+                                    height="11px"
+                                    alt=""
+                                    loading="lazy"
+                                  /></li>
+                                <li>
+                                    <img
+                                    src="assets/paint-brushes/round.png"
+                                        height="11"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-title" style="padding-left: 15px;" >
+                <h5 >Colors Used</h5>
+                <br>
+                <mat-grid-list cols="5"  >
+                    <mat-grid-tile *ngFor="let col of colors">
+                        <mat-card style="padding: 5px;width: 75px;">
+                            <mat-card-content style="margin-bottom: 5px;">
+                                <div style="height: 40px;"  [ngStyle]="{'background-color':getColor(col.id)}" >
+
+                                </div>
+                            </mat-card-content>
+                        
+                            
+                            <mat-divider inset></mat-divider>
+                            <mat-card-subtitle style="    font-size: 10px;
+                            font-weight: bold;margin-top:5px">{{col.name}}
+                            <br>
+                            
+                            <span>#{{col.id}}</span>
+                            </mat-card-subtitle>
+                            
+
+                        </mat-card>
+                        &nbsp;
+                    </mat-grid-tile>
+                  </mat-grid-list>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <mat-card class="example-card" style="box-shadow: 5px 5px 5px #888888;">
+    <mat-card-title-group>
+      <mat-card-title>Artist</mat-card-title>
+      <mat-card-subtitle>Lucifer Morningstar</mat-card-subtitle>
+      <img mat-card-sm-image src="assets/artist-lucy.jpg" style="border-radius: 50%;" >
+    </mat-card-title-group>
+    <mat-card-content>
+      {{longText}}
+    </mat-card-content>
+  </mat-card>
+  <br>
+  

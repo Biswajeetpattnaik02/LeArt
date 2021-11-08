@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-between">
+  <div class="p-2 bd-highlight"><i class="fa fa-chevron-left fa-2x" style="color: #151515;" aria-hidden="true"></i></div>
+  <div class="p-2 bd-highlight"><i class="fa fa-chevron-right fa-2x" style="color: #151515;"aria-hidden="true"></i></div>
+</div>
+<swiper
+    [effect]="'coverflow'"
+    [grabCursor]="true"
+    [centeredSlides]="true"
+    [slidesPerView]="'auto'"
+    [coverflowEffect]="{
+      rotate: 15,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows: true
+    }"
+    [pagination]="true"
+    class="mySwiper"
+    style="padding-top: 0px;"
+  >
+    <ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-1.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-2.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-3.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-4.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-5.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-6.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-7.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-8.jpg" /></ng-template
+    ><ng-template swiperSlide
+      ><img class="itemImg" src="https://swiperjs.com/demos/images/nature-9.jpg"
+    /></ng-template>
+  </swiper>
+
+  <app-paint-video></app-paint-video>
